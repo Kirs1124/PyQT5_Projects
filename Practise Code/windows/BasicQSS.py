@@ -33,5 +33,12 @@ class BasicQSS(QWidget):
 if __name__ == '__main__':
     app = QApplication(sys.argv)
     form = BasicQSS()
+    # 选择器
+    qssButton = """
+        QPushButton {
+            background-color:red;
+        }
+    """
+    form.setStyleSheet(qssButton)
     form.show()
     sys.exit(app.exec_())
