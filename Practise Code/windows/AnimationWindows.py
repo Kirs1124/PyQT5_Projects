@@ -40,7 +40,6 @@ class AnimationWindows(QWidget):
         if Qt.LeftButton and self.m_drag:
             self.move(QMouseEvent.globalPos() - self.m_DragPosition)
 
-
     def mouseReleaseEvent(self, QMouseEvent):
         self.m_drag = False
         self.setCursor(QCursor(Qt.ArrowCursor))
