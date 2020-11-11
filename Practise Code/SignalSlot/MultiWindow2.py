@@ -12,6 +12,7 @@ from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
 from NewDateDialog import NewDateDialog
 
+
 class MultiWindow2(QWidget):
     def __init__(self, parent=None):
         super(MultiWindow2, self).__init__(parent)
@@ -44,9 +45,9 @@ class MultiWindow2(QWidget):
     def deal_inner_slot(self, date):
         self.lineEdit_inner.setText(date.toString())
 
-
     def deal_emit_slot(self, dateStr):
         self.lineEdit_emit.setText(dateStr)
+
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
