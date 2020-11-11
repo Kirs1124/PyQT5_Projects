@@ -67,7 +67,7 @@ class Drawing(QWidget):
         if event.button() == Qt.LeftButton:
             self.endPoint = event.pos()
             # 进行重新绘制
-            self.update()
+            self.update()   # 程序自动调用paintEvent函数
 
 
 if __name__ == "__main__":

@@ -8,7 +8,8 @@ import sys
 from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 from PyQt5 import QtCore
-from PyQt5.QtGui  import *
+from PyQt5.QtGui import *
+
 
 class WindowStyle(QWidget):
     def __init__(self):
@@ -22,7 +23,7 @@ class WindowStyle(QWidget):
         # 获取当前窗口的风格
 
         print(QApplication.style().objectName())
-        index = self.styleComboBox.findText(QApplication.style().objectName(),QtCore.Qt.MatchFixedString)
+        index = self.styleComboBox.findText(QApplication.style().objectName(), QtCore.Qt.MatchFixedString)
 
         self.styleComboBox.setCurrentIndex(index)
 
@@ -30,8 +31,10 @@ class WindowStyle(QWidget):
         horizontalLayout.addWidget(self.styleLabel)
         horizontalLayout.addWidget(self.styleComboBox)
         self.setLayout(horizontalLayout)
-    def handleStyleChanged(self,style):
+
+    def handleStyleChanged(self, style):
         QApplication.setStyle(style)
+
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
